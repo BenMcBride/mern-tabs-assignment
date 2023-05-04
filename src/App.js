@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Tabs from './components/Tabs'
 
 function App() {
+  const tabNames = ['Tab 1', 'Tab 2', 'Tab 3'];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Tabs
+        tab={["Tab 1", "Tab 2", "Tab 3"]}
+        onClickTab={(value) => {
+          console.log(`Clicked on tab ${value}`);
+        }}
+      />
     </div>
   );
 }
