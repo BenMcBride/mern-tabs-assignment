@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
 const Tabs = (props) => {
-  const [tab1, setTab1] = useState("");
-  const [tab2, setTab2] = useState("");
-  const [tab3, setTab3] = useState("");
+  const [tab1, setTab1] = useState(`${props.tab[0]} content showing here`);
+  const [tab2, setTab2] = useState(`${props.tab[1]} content showing here`);
+  const [tab3, setTab3] = useState(`${props.tab[2]} content showing here`);
   
-  const [selectedTab, setSelectedTab] = useState("");
+  const [selectedTab, setSelectedTab] = useState("Tab 1");
 
   const onClickHandler = (value) => {
     setSelectedTab(value);
