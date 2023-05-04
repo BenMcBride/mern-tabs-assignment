@@ -51,6 +51,7 @@ const Tabs = (props) => {
                 setTab3(e.target.value)
                 break
               default:
+                setTab1(e.target.value)
                 break
           }
         }}></textarea>
